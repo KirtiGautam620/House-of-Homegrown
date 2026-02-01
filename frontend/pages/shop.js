@@ -1,18 +1,29 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import ProductCard from '../components/ProductCard';
 export default function Shop() {
+  const router = useRouter();
+  const { category } = router.query;
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/products?page=${page}&limit=10`)
+    setPage(1);
+  }, [category]);
+
+  useEffect(() => {
+    let url = `http://localhost:4000/api/products?page=${page}&limit=10`;
+    if (category) {
+      url += `&category=${category}`;
+    }
+    fetch(url)
       .then(res => res.json())
       .then(data => {
         setProducts(data.products);
         setTotalPages(data.pages);
       });
-  }, [page]);
+  }, [page, category]);
 
   const handlePrevious = () => {
     if (page > 1) setPage(page - 1);
