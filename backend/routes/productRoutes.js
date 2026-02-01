@@ -3,8 +3,21 @@ const router=express.Router()
 const Product=require('../models/Product')
 router.get("/",async(req,res)=>{
     try{
-        const products=await Product.find()
-        res.status(200).json(products)
+        const filter={}
+        const page=Number(req.query.page) || 1
+        const limit=Number(req.query.limit) || 10
+        const skip=(page-1)*limit
+        if(req.query.category){
+            filter.categoryId=Number(req.query.category)
+        }
+        if(req.query.search){
+            filter.name={$regex:req.query.search,$options:"i"}
+        }
+        const products=await Product.find(filter).skip(skip).limit(limit)
+        const tot=await Product.countDocuments(filter)
+        res.status(200).json({
+            tot,page,pages:Math.ceil(tot/limit),products
+        })
     }
     catch(err){
         res.status(500).json(err)
@@ -24,8 +37,9 @@ router.post("/",async(req,res)=>{
     try{
         const last=await Product.findOne().sort({id:-1})
         const id=last && last.id? last.id+1:1
-        const {name,description,price,category,image}=req.body
-        const product=new Product({id:id,name,description,price,category,image})
+        const {name,description,price,categoryId,image}=req.body
+        if(!name|| !price || !categoryId) return res.status(400).json("All the fields")
+        const product=new Product({id:id,name,description,price,categoryId,image})
         const savedProduct=await product.save()
         res.status(201).json(savedProduct)
     }
