@@ -20,3 +20,14 @@ router.get("/:id",async(req,res)=>{
         res.status(500).json(err)
     }
 })
+router.post("/",async(req,res)=>{
+    try{
+        const {name,description,price,category,image}=req.body
+        const product=new Product({name,description,price,category,image})
+        const savedProduct=await product.save()
+        res.status(201).json(savedProduct)
+    }
+    catch(err){
+        res.status(500).json(err)
+    }
+})
