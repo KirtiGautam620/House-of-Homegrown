@@ -28,7 +28,7 @@ export default function Home() {
       category: "Sustainable Lifestyle",
       price: 799,
       tag: "Eco-Friendly",
-      img: "/jute.png",
+      img: "/jute.jpeg",
     },
   ];
 
@@ -64,10 +64,10 @@ export default function Home() {
       <section className={styles.categories}>
         <h2>Shop by Category</h2>
         <div className={styles.categoryGrid}>
-          <Link href="/shop?category=textiles" className={styles.card}>
-            <img src="/textile.jpg" alt="Textiles" />
+          <Link href="/shop?category=dresses" className={styles.card}>
+            <img src="/textile.jpg" alt="Dresses" />
             <span className={styles.tag}>Handloom</span>
-            <h3>Textiles</h3>
+            <h3>Dresses</h3>
             <p>Handwoven fabrics & garments</p>
           </Link>
           <Link href="/shop?category=home-living" className={styles.card}>
