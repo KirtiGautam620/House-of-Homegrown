@@ -9,6 +9,7 @@
 .logo {
   font-weight: 600;
   color: #4a7c59;
+  text-decoration: none;
 }
 
 .search {
@@ -23,4 +24,5 @@
   margin-left: 20px;
   cursor: pointer;
   color: #5b4636;
+  text-decoration: none;
 }
