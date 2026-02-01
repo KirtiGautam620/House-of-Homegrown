@@ -46,8 +46,12 @@ export default function Home() {
             support artisans, and embrace conscious living.
           </p>
           <div className={styles.buttons}>
-            <button className={styles.primary}>Shop Ethicals</button>
-            <button className={styles.secondary}>Our Story</button>
+            <Link href="/shop">
+              <button className={styles.primary}>Shop Ethicals</button>
+            </Link>
+            <Link href="/about">
+              <button className={styles.secondary}>Our Story</button>
+            </Link>
           </div>
         </div>
       </section>

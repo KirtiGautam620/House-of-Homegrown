@@ -1,0 +1,56 @@
+.susContainer {
+    background-color: #8b9677;
+    padding: 200px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.susHeading {
+    font-family: serif;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.susSubtext {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    line-height: 1.5;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.cardGrid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px 20px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.cardIcon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.cardTitle {
+    font-family: serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cardDesc {
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.8;
+}
