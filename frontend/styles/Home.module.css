@@ -1,0 +1,66 @@
+.hero {
+  position: relative;
+  height: 65vh;
+  background-image: url('../public/home.avif');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.content {
+  position: relative;
+  max-width: 600px;
+  margin-left: 60px;
+  color: #fff;
+}
+
+.content h1 {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.content p {
+  margin-top: 20px;
+  font-size: 16px;
+  max-width: 500px;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.primary {
+  background: #6b8e6e;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 25px;
+  color: white;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid white;
+  padding: 12px 26px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 18px;
+  background: #f7f4ee;
+  color: #5b4636;
+  font-size: 14px;
+}

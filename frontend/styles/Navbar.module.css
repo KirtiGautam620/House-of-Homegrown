@@ -1,0 +1,26 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  background: #f7f4ee;
+}
+
+.logo {
+  font-weight: 600;
+  color: #4a7c59;
+}
+
+.search {
+  width: 360px;
+  padding: 10px 16px;
+  border-radius: 25px;
+  border: 1px solid #d8cfc4;
+  outline: none;
+}
+
+.links a {
+  margin-left: 20px;
+  cursor: pointer;
+  color: #5b4636;
+}
