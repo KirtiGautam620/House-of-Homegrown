@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Category = require("../models/Categroy");
+const Category = require("../models/Category");
 
 router.get("/", async (req, res) => {
   try {
@@ -25,7 +25,8 @@ router.post("/", async (req, res) => {
     const last = await Category.findOne().sort({ id: -1 });
     const id = last && last.id ? last.id + 1 : 1;
     const { name, description } = req.body;
-    const category = new Category({ id, name, description });
+    const slug = name.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, "");
+    const category = new Category({ id, name, slug, description });
     const savedCategory = await category.save();
     res.status(201).json(savedCategory);
   } catch (err) {
