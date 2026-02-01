@@ -1,9 +1,7 @@
 import styles from '../styles/Footer.module.css';
-
 const Footer = () => {
     return (
         <footer className={styles.footerContainer}>
-            {/* Newsletter Section */}
             <div className={styles.newsletterSection}>
                 <div className={styles.newsletterContent}>
                     <div className={styles.newsletterText}>
@@ -23,11 +21,8 @@ const Footer = () => {
                     </form>
                 </div>
             </div>
-
-            {/* Main Footer Content */}
             <div className={styles.mainFooter}>
                 <div className={styles.footerGrid}>
-                    {/* Brand Info */}
                     <div className={styles.brandInfo}>
                         <div className={styles.logoRow}>
                             <div className={styles.logoIcon}>🏠</div>
@@ -44,8 +39,6 @@ const Footer = () => {
                             <span className={styles.socialCircle}>▶️</span>
                         </div>
                     </div>
-
-                    {/* Navigation Links */}
                     <div className={styles.linkColumn}>
                         <h4>Shop</h4>
                         <ul>
@@ -56,7 +49,6 @@ const Footer = () => {
                             <li>New Arrivals</li>
                         </ul>
                     </div>
-
                     <div className={styles.linkColumn}>
                         <h4>Company</h4>
                         <ul>
@@ -67,7 +59,6 @@ const Footer = () => {
                             <li>Contact</li>
                         </ul>
                     </div>
-
                     <div className={styles.linkColumn}>
                         <h4>Support</h4>
                         <ul>
@@ -79,8 +70,6 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-
-                {/* Bottom Bar */}
                 <div className={styles.bottomBar}>
                     <p>© 2024 House of Homegrown. All rights reserved.</p>
                     <div className={styles.paymentMethods}>
@@ -96,5 +85,4 @@ const Footer = () => {
         </footer>
     );
 };
-
 export default Footer;
