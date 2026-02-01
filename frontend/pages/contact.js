@@ -10,7 +10,6 @@ export default function Contact() {
             </p>
 
             <div className={styles.contentWrapper}>
-                {/* Contact Information */}
                 <div className={styles.infoSection}>
                     <div className={styles.infoCard}>
                         <h3>Visit Us</h3>
@@ -27,8 +26,6 @@ export default function Contact() {
                         <p>+91 98765 43210<br />Mon-Fri, 10am - 6pm IST</p>
                     </div>
                 </div>
-
-                {/* Contact Form */}
                 <form className={styles.formSection}>
                     <div className={styles.formGroup}>
                         <label htmlFor="name">Name</label>
