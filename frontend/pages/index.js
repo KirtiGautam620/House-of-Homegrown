@@ -28,7 +28,7 @@ export default function Home() {
       category: "Sustainable Lifestyle",
       price: 799,
       tag: "Eco-Friendly",
-      img: "/jute.png",
+      img: "/jute.jpeg",
     },
   ];
 
