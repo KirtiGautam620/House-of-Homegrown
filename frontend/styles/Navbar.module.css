@@ -55,28 +55,22 @@
 .barOpen:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
-
 .barOpen:nth-child(2) {
   opacity: 0;
 }
-
 .barOpen:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
-
 @media (max-width: 768px) {
   .nav {
     padding: 14px 20px;
   }
-
   .search {
     display: none;
   }
-
   .hamburger {
     display: flex;
   }
-
   .links {
     position: absolute;
     top: 0;
@@ -92,11 +86,9 @@
     transition: transform 0.3s ease-in-out;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   }
-
   .links.open {
     transform: translateX(0);
   }
-
   .links a {
     margin-left: 0;
     font-size: 18px;
