@@ -49,7 +49,7 @@ router.post("/",async(req,res)=>{
 })
 router.put("/:id",async(req,res)=>{
     try{
-        const updatedProduct=await Product.findByIdAndUpdate(
+        const updatedProduct=await Product.findOneAndUpdate(
             { id: Number(req.params.id) },
             req.body,
             {new:true}
@@ -61,7 +61,7 @@ router.put("/:id",async(req,res)=>{
 })
 router.delete("/:id",async(req,res)=>{
     try{
-        await Product.findByIdAndDelete({ id: Number(req.params.id) })
+        await Product.findOneAndDelete({ id: Number(req.params.id) })
         res.status(200).json("Product deleted")
     }
     catch(err){
