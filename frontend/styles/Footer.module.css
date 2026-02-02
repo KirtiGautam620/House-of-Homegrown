@@ -142,6 +142,15 @@
 .linkColumn li:hover {
     color: var(--color-secondary);
 }
+.footerLink {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s;
+}
+
+.footerLink:hover {
+    color: var(--color-secondary);
+}
 .bottomBar {
     max-width: 1200px;
     margin: 0 auto;

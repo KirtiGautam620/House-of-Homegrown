@@ -38,12 +38,11 @@ export default function Home() {
         <div className={styles.overlay} />
         <div className={styles.content}>
           <h1>
-            Sustainably made.<br />
-            Proudly Indian.
+            Roti, Kapda aur Makaan.<br />
           </h1>
           <p>
-            Handcrafted products that honor tradition,
-            support artisans, and embrace conscious living.
+            Reimagining India's essential philosophy with sustainable textiles,
+            conscious home living, and natural wellness.
           </p>
           <div className={styles.buttons}>
             <Link href="/shop">

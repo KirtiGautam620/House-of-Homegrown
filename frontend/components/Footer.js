@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '../styles/Footer.module.css';
 const Footer = () => {
     return (
@@ -42,31 +43,29 @@ const Footer = () => {
                     <div className={styles.linkColumn}>
                         <h4>Shop</h4>
                         <ul>
-                            <li>Textiles</li>
-                            <li>Home & Living</li>
-                            <li>Wellness</li>
-                            <li>Lifestyle</li>
-                            <li>New Arrivals</li>
+                            <li><Link href="/shop" className={styles.footerLink}>Textiles</Link></li>
+                            <li><Link href="/shop?category=home-living" className={styles.footerLink}>Home & Living</Link></li>
+                            <li><Link href="/shop?category=wellness" className={styles.footerLink}>Wellness</Link></li>
+                            <li><Link href="/shop?category=lifestyle" className={styles.footerLink}>Lifestyle</Link></li>
+                            <li><Link href="/shop" className={styles.footerLink}>New Arrivals</Link></li>
                         </ul>
                     </div>
                     <div className={styles.linkColumn}>
                         <h4>Company</h4>
                         <ul>
-                            <li>About Us</li>
-                            <li>Our Story</li>
-                            <li>Sustainability</li>
-                            <li>Artisan Partners</li>
-                            <li>Contact</li>
+                            <li><Link href="/about" className={styles.footerLink}>About Us</Link></li>
+                            <li><Link href="/about" className={styles.footerLink}>Our Story</Link></li>
+                            <li><Link href="/sustainability" className={styles.footerLink}>Sustainability</Link></li>
+                            <li><Link href="/contact" className={styles.footerLink}>Contact</Link></li>
                         </ul>
                     </div>
                     <div className={styles.linkColumn}>
                         <h4>Support</h4>
                         <ul>
-                            <li>FAQ</li>
-                            <li>Shipping & Returns</li>
-                            <li>Privacy Policy</li>
-                            <li>Terms & Conditions</li>
-                            <li>Track Order</li>
+                            <li><Link href="/faq" className={styles.footerLink}>FAQ</Link></li>
+                            <li><Link href="/legal/shipping-returns" className={styles.footerLink}>Shipping & Returns</Link></li>
+                            <li><Link href="/legal/privacy" className={styles.footerLink}>Privacy Policy</Link></li>
+                            <li><Link href="/legal/terms" className={styles.footerLink}>Terms & Conditions</Link></li>
                         </ul>
                     </div>
                 </div>
