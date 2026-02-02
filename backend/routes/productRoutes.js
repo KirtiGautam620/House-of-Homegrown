@@ -29,8 +29,6 @@ router.get("/",async(req,res)=>{
             filter.name = { $regex: req.query.search, $options: "i" }
         }
         const products = await Product.find(filter).skip(skip).limit(limit)
-
-        // Populate category names manually since categoryId is not a ref
         const productsWithCategory = await Promise.all(products.map(async (p) => {
             const category = await Category.findOne({ id: p.categoryId });
             return {

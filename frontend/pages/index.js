@@ -38,12 +38,11 @@ export default function Home() {
         <div className={styles.overlay} />
         <div className={styles.content}>
           <h1>
-            Sustainably made.<br />
-            Proudly Indian.
+            Roti, Kapda aur Makaan.<br />
           </h1>
           <p>
-            Handcrafted products that honor tradition,
-            support artisans, and embrace conscious living.
+            Reimagining India's essential philosophy with sustainable textiles,
+            conscious home living, and natural wellness.
           </p>
           <div className={styles.buttons}>
             <Link href="/shop">
@@ -64,10 +63,10 @@ export default function Home() {
       <section className={styles.categories}>
         <h2>Shop by Category</h2>
         <div className={styles.categoryGrid}>
-          <Link href="/shop?category=dresses" className={styles.card}>
-            <img src="/textile.jpg" alt="Dresses" />
+          <Link href="/shop?category=clothes" className={styles.card}>
+            <img src="/textile.jpg" alt="Clothes" />
             <span className={styles.tag}>Handloom</span>
-            <h3>Dresses</h3>
+            <h3>Clothes</h3>
             <p>Handwoven fabrics & garments</p>
           </Link>
           <Link href="/shop?category=home-living" className={styles.card}>
