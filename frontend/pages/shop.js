@@ -1,19 +1,21 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import ProductCard from '../components/ProductCard';
+import 'dotenv/config'
 export default function Shop() {
   const router = useRouter();
   const { category } = router.query;
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+    const uri = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api";
 
   useEffect(() => {
     setPage(1);
   }, [category]);
 
   useEffect(() => {
-    let url = `http://localhost:4000/api/products?page=${page}&limit=10`;
+    let url = `${uri}/products?page=${page}&limit=10`;
     if (category) {
       url += `&category=${category}`;
     }
