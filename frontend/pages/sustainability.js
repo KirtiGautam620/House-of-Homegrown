@@ -7,7 +7,6 @@ const Sustainability = () => {
         { title: "Fair Trade", desc: "Supporting artisan communities fairly", icon: "👥" },
         { title: "Made with Love", desc: "Handcrafted with care and tradition", icon: "❤️" }
     ];
-
     return (
         <section className={styles.susContainer}>
             <h2 className={styles.susHeading}>Committed to Sustainability</h2>
@@ -27,5 +26,4 @@ const Sustainability = () => {
         </section>
     );
 };
-
 export default Sustainability;

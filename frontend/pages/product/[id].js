@@ -7,14 +7,11 @@ export default function ProductDetail() {
 
   useEffect(() => {
     if (!query.id) return;
-
     fetch(`http://localhost:4000/api/products/${query.id}`)
       .then(res => res.json())
       .then(data => setProduct(data));
   }, [query.id]);
-
   if (!product) return <p>Loading...</p>;
-
   return (
     <div>
       <h1>{product.name}</h1>
