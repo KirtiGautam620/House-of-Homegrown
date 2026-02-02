@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {useState,useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/Navbar.module.css';
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
       <Link href="/" className={styles.logo}>
-        🌿 House of Homegrown
+        <span className={styles.logoText}>House of Homegrown</span>
       </Link>
       <div className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}>
         <span className={isOpen ? styles.barOpen : styles.bar}></span>
