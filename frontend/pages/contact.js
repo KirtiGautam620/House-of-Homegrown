@@ -3,10 +3,9 @@ import styles from '../styles/Contact.module.css';
 export default function Contact() {
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Get in Touch</h1>
+            <h1 className={styles.title}>Namaste! Let's Connect</h1>
             <p className={styles.subtitle}>
-                Have questions about our products or want to discuss a custom order?
-                We'd love to hear from you.
+                Whether you have a question about our textiles, a custom order, or just want to say hello, we are here to listen.
             </p>
             <div className={styles.contentWrapper}>
                 <div className={styles.infoSection}>

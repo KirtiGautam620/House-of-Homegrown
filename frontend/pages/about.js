@@ -15,7 +15,7 @@ export default function About() {
                         House of Homegrown was born from a desire to bridge the gap between
                         traditional Indian craftsmanship and contemporary living. We started
                         as a small initiative to bring the work of rural artisans to a
-                        global audience.
+                        global audience, celebrating the imperfections of the handmade.
                     </p>
                 </div>
 
@@ -25,7 +25,7 @@ export default function About() {
                         We believe in "slow fashion" and conscious consumption. Every
                         product you see is handcrafted using sustainable materials, natural
                         dyes, and age-old techniques that have been passed down through
-                        generations.
+                        generations. We honor the earth and the hands that shape it.
                     </p>
                 </div>
 
@@ -34,7 +34,8 @@ export default function About() {
                     <p>
                         By choosing us, you are not just buying a product; you are supporting
                         a livelihood. We work directly with artisan communities, ensuring fair
-                        wages and safe working conditions.
+                        wages and safe working conditions. Together, we are building a
+                        community rooted in respect and creativity.
                     </p>
                 </div>
             </section>
