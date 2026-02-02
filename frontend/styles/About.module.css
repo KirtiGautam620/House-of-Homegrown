@@ -1,39 +1,63 @@
 .container {
     padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
 }
+
 .hero {
-    background-color: #6b8e6e;
-    padding: 100px 20px;
+    background-color: var(--color-plum);
+    padding: 120px 20px;
     text-align: center;
-    color: #3e3a34;
+    color: var(--color-white);
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
+
 .hero h1 {
-    font-size: 48px;
+    font-family: serif;
+    font-size: 56px;
     margin-bottom: 20px;
+    color: var(--color-secondary);
 }
+
 .hero p {
-    font-size: 20px;
-    color: #5b4636;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
 }
 
 .content {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 0 20px;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 40px;
 }
 
 .section {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(88, 40, 65, 0.05);
+    transition: transform 0.3s ease;
+    border-left: 5px solid var(--color-primary);
+}
+
+.section:hover {
+    transform: translateY(-5px);
 }
 
 .section h2 {
-    font-size: 28px;
-    color: #6b8e6e;
-    margin-bottom: 15px;
+    font-family: serif;
+    font-size: 32px;
+    color: var(--color-primary);
+    margin-bottom: 20px;
 }
 
 .section p {
     font-size: 18px;
-    line-height: 1.6;
-    color: #5b4636;
+    line-height: 1.8;
+    color: var(--color-plum);
+    opacity: 0.9;
 }

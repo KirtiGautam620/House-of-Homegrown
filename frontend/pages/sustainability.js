@@ -2,10 +2,10 @@ import styles from '../styles/Sustainability.module.css';
 
 const Sustainability = () => {
     const features = [
-        { title: "Zero Waste", desc: "Minimal packaging with recycled materials", icon: "♻️" },
-        { title: "Natural Materials", desc: "Organic cotton, jute, and natural dyes", icon: "🌱" },
-        { title: "Fair Trade", desc: "Supporting artisan communities fairly", icon: "👥" },
-        { title: "Made with Love", desc: "Handcrafted with care and tradition", icon: "❤️" }
+        { title: "Zero Waste", desc: "Minimal packaging with recycled materials", img: "/sustainability_zero_waste.png" },
+        { title: "Natural Materials", desc: "Organic cotton, jute, and natural dyes", img: "/sustainability_natural_materials.png" },
+        { title: "Fair Trade", desc: "Supporting artisan communities fairly", img: "/sustainability_fair_trade.png" },
+        { title: "Made with Love", desc: "Handcrafted with care and tradition", img: "/sustainability_crafted_love.png" }
     ];
     return (
         <section className={styles.susContainer}>
@@ -17,7 +17,9 @@ const Sustainability = () => {
             <div className={styles.cardGrid}>
                 {features.map((item, index) => (
                     <div key={index} className={styles.card}>
-                        <div className={styles.cardIcon}>{item.icon}</div>
+                        <div className={styles.imageWrapper}>
+                            <img src={item.img} alt={item.title} className={styles.cardImage} />
+                        </div>
                         <h3 className={styles.cardTitle}>{item.title}</h3>
                         <p className={styles.cardDesc}>{item.desc}</p>
                     </div>

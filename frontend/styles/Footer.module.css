@@ -2,10 +2,8 @@
     width: 100%;
     font-family: sans-serif;
 }
-
-/* Newsletter Section Styles */
 .newsletterSection {
-    background-color: #8d7756;
+    background-color: var(--color-highlight-orange);
     padding: 60px 24px;
 }
 
@@ -22,7 +20,7 @@
 .newsletterHeading {
     font-family: serif;
     font-size: 32px;
-    color: #ffffff;
+    color: var(--color-white);
     margin-bottom: 8px;
 }
 
@@ -30,37 +28,38 @@
     color: rgba(255, 255, 255, 0.9);
     max-width: 500px;
 }
-
 .newsletterForm {
     display: flex;
     gap: 12px;
     flex-grow: 1;
     max-width: 500px;
 }
-
 .emailInput {
     flex-grow: 1;
     padding: 16px 24px;
     border-radius: 50px;
     border: none;
     font-size: 16px;
+    outline: none;
 }
 
 .subscribeBtn {
-    background-color: #ffffff;
-    color: #4a3728;
+    background-color: var(--color-plum);
+    color: var(--color-white);
     padding: 16px 32px;
     border-radius: 50px;
     border: none;
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
+    transition: background-color 0.2s;
 }
-
-/* Main Footer Styles */
+.subscribeBtn:hover {
+    background-color: #3d2828;
+}
 .mainFooter {
-    background-color: #4a3728;
-    color: #ffffff;
+    background-color: var(--color-plum);
+    color: var(--color-white);
     padding: 80px 24px 40px;
 }
 
@@ -82,7 +81,7 @@
 }
 
 .logoIcon {
-    background-color: #8d7756;
+    background-color: var(--color-highlight-orange);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -117,6 +116,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: background-color 0.2s;
+}
+.socialCircle:hover {
+    background-color: var(--color-highlight-red);
 }
 
 .linkColumn h4 {
@@ -129,7 +132,6 @@
     list-style: none;
     padding: 0;
 }
-
 .linkColumn li {
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 12px;
@@ -138,10 +140,8 @@
 }
 
 .linkColumn li:hover {
-    color: #ffffff;
+    color: var(--color-secondary);
 }
-
-/* Bottom Bar */
 .bottomBar {
     max-width: 1200px;
     margin: 0 auto;
@@ -164,8 +164,6 @@
     gap: 10px;
     font-size: 20px;
 }
-
-/* Mobile Responsiveness */
 @media (max-width: 992px) {
     .footerGrid {
         grid-template-columns: 1fr 1fr;

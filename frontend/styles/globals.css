@@ -1,7 +1,17 @@
+:root {
+  --color-primary: #CC2A49;
+  --color-secondary: #F99E4C;
+  --color-highlight-orange: #F36F38;
+  --color-highlight-red: #EF4648;
+  --color-plum: #582841;
+  --color-off-white: #FFF8F0;
+  --color-white: #ffffff;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: system-ui, sans-serif;
-  background-color: #F8F7F0;
-  color: #333;
+  background-color: var(--color-off-white);
+  color: var(--color-plum);
 }
