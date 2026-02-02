@@ -1,10 +1,10 @@
-const express = require('express')
-const router = express.Router()
-const Product = require('../models/Product')
-const Category = require('../models/Category')
-router.get("/", async (req, res) => {
-    try {
-        const filter = {}
+const express=require('express')
+const router=express.Router()
+const Product=require('../models/Product')
+const Category=require('../models/Category')
+router.get("/",async(req,res)=>{
+    try{
+        const filter={}
         const page = Number(req.query.page) || 1
         const limit = Number(req.query.limit) || 10
         const skip = (page - 1) * limit
@@ -23,9 +23,9 @@ router.get("/", async (req, res) => {
                     categoryId = -1;
                 }
             }
-            filter.categoryId = Number(categoryId)
+            filter.categoryId=Number(categoryId)
         }
-        if (req.query.search) {
+        if(req.query.search){
             filter.name = { $regex: req.query.search, $options: "i" }
         }
         const products = await Product.find(filter).skip(skip).limit(limit)
@@ -44,12 +44,12 @@ router.get("/", async (req, res) => {
             tot, page, pages: Math.ceil(tot / limit), products: productsWithCategory
         })
     }
-    catch (err) {
+    catch(err){
         res.status(500).json(err)
     }
 })
-router.get("/:id", async (req, res) => {
-    try {
+router.get("/:id",async(req,res)=>{
+    try{
         const product = await Product.findOne({ id: Number(req.params.id) })
         if (!product) return res.status(404).json("Product not found")
 
@@ -77,29 +77,29 @@ router.post("/", async (req, res) => {
         const savedProduct = await product.save()
         res.status(201).json(savedProduct)
     }
-    catch (err) {
+    catch(err){
         res.status(500).json(err)
     }
 })
-router.put("/:id", async (req, res) => {
-    try {
+router.put("/:id",async(req,res)=>{
+    try{
         const updatedProduct = await Product.findOneAndUpdate(
             { id: Number(req.params.id) },
             req.body,
             { new: true }
         )
         res.status(200).json(updatedProduct)
-    } catch (err) {
+    }catch(err){
         res.status(500).json(err)
     }
 })
 router.delete("/:id", async (req, res) => {
-    try {
+    try{
         await Product.findOneAndDelete({ id: Number(req.params.id) })
         res.status(200).json("Product deleted")
     }
-    catch (err) {
+    catch(err){
         res.status(500).json(err)
     }
 })
-module.exports = router
+module.exports=router
