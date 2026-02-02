@@ -14,4 +14,6 @@ body {
   font-family: system-ui, sans-serif;
   background-color: var(--color-off-white);
   color: var(--color-plum);
+  overflow-x: hidden;
+  width: 100%;
 }
