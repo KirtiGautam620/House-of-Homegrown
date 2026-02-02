@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --color-primary: #CC2A49;
   --color-secondary: #F99E4C;
@@ -8,6 +14,7 @@
   --color-white: #ffffff;
 }
 
+html,
 body {
   margin: 0;
   padding: 0;
@@ -16,4 +23,5 @@ body {
   color: var(--color-plum);
   overflow-x: hidden;
   width: 100%;
+  max-width: 100vw;
 }
